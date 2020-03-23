@@ -27,7 +27,7 @@ func main() {
 	dc.AddTag("debug", "true")
 	dc.AddTag("version", "v1.2.3")
 	
-    // creating a gauge task that will running every minute
+	// creating a gauge task that will running every minute
 	dc.RunGaugeTask(
 		"user_online",
 		time.Minute,
@@ -36,9 +36,9 @@ func main() {
 			return 5, err
 		},
 	)
-
-    // start client updater
+	
+	// start client updater
 	dc.Start()
-    // or run in goroutine dc.Start()
+	// or run in goroutine dc.Start()
 }
 ```
